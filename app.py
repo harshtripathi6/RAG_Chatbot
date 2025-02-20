@@ -42,9 +42,9 @@ def create_vector_store(docs):
 
 def chat_groq(messages):
     load_dotenv()
-    API_KEY = os.getenv("GROQ_API_KEY")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
     #apii_key = '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'
-    client = Groq(api_key=API_KEY)
+    client = Groq(api_key=GROQ_API_KEY)
     response_content = ''
     stream = client.chat.completions.create(
         model="llama3-70b-8192",
